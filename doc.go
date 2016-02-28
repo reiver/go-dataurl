@@ -28,17 +28,17 @@ Example Usage
 		//@TODO
 	}
 	
-	fmt.Printf("Content: %q \n", parcel.String)
-	fmt.Printf("Media Type: %q \n", parcel.MediaType())
+	fmt.Printf("Content: %q \n", parcel.String()) // parcel.String() == "Hello world!"
+	fmt.Printf("Media Type: %q \n", parcel.MediaType()) // parcel.MediaType() == "text/plain;charset=US-ASCII"
 
 Another Example Usage
 
 	// Note that dataurl.MustPasre() will panic() if there is an
 	// error when trying to parse the data URL!
-	parcel := dataurl.MustParse("data:,Hello%20world!")
+	parcel := dataurl.MustParse("data:,Hello%20world!") // parcel.String() == "Hello world!"
 	
-	fmt.Printf("Content: %q \n", parcel.String)
-	fmt.Printf("Media Type: %q \n", parcel.MediaType())
+	fmt.Printf("Content: %q \n", parcel.String())
+	fmt.Printf("Media Type: %q \n", parcel.MediaType()) // parcel.MediaType() == "text/plain;charset=US-ASCII"
 
 */
 package dataurl

@@ -33,8 +33,8 @@ if nil != err {
     //@TODO
 }
 
-fmt.Printf("Content: %q \n", parcel.String)
-fmt.Printf("Media Type: %q \n", parcel.MediaType())
+fmt.Printf("Content: %q \n", parcel.String()) // parcel.String() == "Hello world!"
+fmt.Printf("Media Type: %q \n", parcel.MediaType()) // parcel.MediaType() == "text/plain;charset=US-ASCII"
 ```
 
 ## Another example
@@ -43,6 +43,6 @@ fmt.Printf("Media Type: %q \n", parcel.MediaType())
 // error when trying to parse the data URL!
 parcel := dataurl.MustParse("data:,Hello%20world!")
 
-fmt.Printf("Content: %q \n", parcel.String)
-fmt.Printf("Media Type: %q \n", parcel.MediaType())
+fmt.Printf("Content: %q \n", parcel.String()) // parcel.String() == "Hello world!"
+fmt.Printf("Media Type: %q \n", parcel.MediaType()) // parcel.MediaType() == "text/plain;charset=US-ASCII"
 ```
